@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    font-family: Montserrat, sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: #cfcfcf36;
+    position: relative;
+    width: 100%;
+}
+.login{
+    text-align: center;
+    padding-top: 10vh;
+    color: gray;
+}
+h2{
+    margin: 50px 0;
+}
+
+.header{
+    padding-left: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+}
+h5{
+    color: gray;
+}
+.db{
+    font-size: 10px;
+    color: #6a8167;
+    margin-bottom: 3px;
+}
+#main{
+    background-color: white;
+    display: none;
+    grid-template-rows: 85px 1fr 71px;
+    width: 65%;
+    min-height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+.button{
+    background: rgba(117, 156, 39, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    outline: none;
+}
+.button:hover{
+    transform: scale( 1.02);
+    box-shadow: 6px 6px 23px -9px black;
+    transition: .2s;
+}
+#name, #connectName{
+    line-height: 25px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 5px;
+    font-size: 1.1em;
+    color: rgba(0, 0, 0, 0.7);
+    background-color: #cfcfcf66;
+    outline: none;
+    box-sizing: border-box;
+}
+input::placeholder{
+    line-height: 25px;
+    font-size: 12px;
+    font-family: Montserrat, sans-serif;
+    opacity: .7;
+}
+#connectName{
+    margin-left: 24px;
+}
+
+.account{
+    margin-top: 30px;
+    animation: appear 1.5s;
+}
+.account:nth-child(1){
+    margin-top: 0px;
+}
+#accounts{
+    color: gray;
+    border-radius: 10px;
+}
+@keyframes disappear {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes alert {
+    0%{
+        top: -20px;
+    }
+    50%{
+        top: 0;
+    }
+    80%{
+        top: 10px;
+    }
+    100%{
+        top: -20px;
+    }
+}
+.account img{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+}
+.deleting{
+    animation: disappear 2s;
+}
+.info{
+    position: relative;
+    display: inline-block;
+    width: 148px;
+    text-align: center;
+    line-height: 150px;
+    height: 150px;
+    border: 1px solid #cfcfcf;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.info a{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 50px;
+    width: 100%;
+    text-decoration: none;
+    color: olivedrab;
+}
+.info p{
+    position: absolute;
+    top: 50px;
+    line-height: 50px;
+    width: 100%;
+    padding-left: 10px;
+}
+.info p:before{
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    content: '';
+    background: url("./src/icons/fol.png") no-repeat;
+    background-size: 100%;
+    width: 15px;
+    height: 15px;
+}
+.account{
+    height: 150px;
+}
+.deleteBtn{
+    background: url("./src/icons/delete1.png" ) no-repeat ;
+    background-size: 100%;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 100px;
+    text-align: center;
+    left: 53px
+}
+.deleteBtn:hover{
+    transform: scale(1.1);
+    transition: .2s;
+}
+.alert{
+    width: 100%;
+    height: 25px;
+    background-color: rgb(255, 155, 156);
+    color: #d2ffc9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    animation: alert 2s;
+    z-index: 99;
+}
+.delete{
+    display: none;
+}
+#logout{
+    position: absolute;
+    right: 0px;
+    margin-left: 25px;
+}
+
+.connect{
+    position: relative;
+    width: 100%;
+    padding-top: 4vh;
+    background-color: beige;
+    box-sizing: border-box;
+}
+#disconnectBtn{
+    position: absolute;
+    right: 0;
+    margin-left: 25px;
+}
+#connectBtn{
+    margin-bottom: 5px;
+}
+.group{
+    display: inline-block;
+}
+
+
+.content{
+    width: 65%;
+    position: relative;
+    background-color: white;
+    height: 100%;
+    margin: 0 auto;
+}
+h3{
+    text-align: center;
+    padding: 10px;
+}
+.list>div p{
+    display: inline-block;
+    line-height: 45px;
+    text-align: center;
+    width: 65%;
+}
+.list>div {
+    position: relative;
+    width: 100%;
+    padding: 0 5px;
+    height: 45px;
+}
+.list>div:nth-child(2n+1){
+    background-color: #cfcfcf36;
+}
+.popupRequest{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    min-height: 100%;
+    display: none;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0.41);
+}
+.list{
+
+}
+.close{
+    position: absolute;
+    right: 16px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 20px;
+    color: #242424;
+}
+.buts{
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    width: 135px
+}
+.buts button{
+    display: inline-block;
+    margin: 2px;
+}
+
+.close:hover{
+    color: rgba(36, 36, 36, 0.73);
+}
+@media screen and (max-width: 768px){
+    body{
+        height: 100vh;
+        background-color: white;
+    }
+    h5, .db{
+        text-align: center;
+    }
+    #main{
+        width: 100%;
+        grid-template-rows: 80px 1fr 115px;
+    }
+    #name, #connectName {
+        font-size: 1.1em;
+    }
+    .header{
+        text-align: left;
+    }
+    .connect button{
+        display: block;
+        position: relative;
+    }
+    .button{
+        font-size: 12px;
+    }
+    #connectName{
+        margin-left: 0 !important;
+        width: calc(85% - 0px);
+    }
+    #disconnectBtn, #connectBtn{
+        position: relative;
+        display: inline-block;
+        width: 40%;
+        top: 5px;
+        right: 0;
+    }
+    .group{
+        width: 100%;
+        text-align: center;
+    }
+    .account{
+        transform: scale(.9);
+    }
+    .content{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 870px){
+    #connectName {
+        margin-left: -80px;
+    }
+}

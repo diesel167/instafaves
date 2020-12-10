@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="src/icons/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+    <title>InstaFaves</title>
+</head>
+<body>
+<script src="./src/index.js"></script>
+<div class="alert delete">
+    Пользователя не существует
+</div>
+<div class="login">
+    <h2>Login with Google account</h2>
+    <button id="login" class="button">Login</button>
+</div>
+<div class="popupRequest">
+    <div class="content">
+        <h3>Requests:</h3>
+        <div class="list">
+
+        </div>
+        <div class="close">&#215;</div>
+    </div>
+</div>
+<div id="main">
+    <div class="header">
+        <h5>Current database name:</h5>
+        <p class="db"></p>
+        <input id='name' type="text" placeholder="Instagram profile">
+        <button id='btn' class="button">Add</button>
+        <button id="logout" class="button">Logout</button>
+    </div>
+    <div id="accounts"></div>
+    <div class="connect">
+        <input id="connectName" type="text" placeholder="E-mail to connect/disconnect">
+        <div class="group">
+            <button id="connectBtn" class="button">Connect</button>
+            <button id="disconnectBtn" class="button">Disconnect</button>
+        </div>
+    </div>
+</div>
+
+</body>
